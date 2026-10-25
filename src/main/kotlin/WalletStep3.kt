@@ -9,7 +9,7 @@ fun main() {
     val spent = rent + food + transport + books
     val spentFromIncome = spent * 100 / salary
     val averageSpentPerDay = spent / 30
-    val sharpAverageSpentPerDay = spent.toDouble() / 30
+    val preciseAverageSpentPerDay = spent.toDouble() / 30
     val startBalance = balance
     val target = 89990
 
@@ -26,7 +26,7 @@ fun main() {
     balance -= books
     println("Книги: $balance руб.")
     println("Конец месяца: $balance руб.")
-    println("")
+    println()
 
     val moneySetAside = balance - startBalance
     val leftToTarget = target - balance
@@ -37,15 +37,16 @@ fun main() {
     println("Доля трат от дохода: $spentFromIncome%")
     println("Отложено за месяц: $moneySetAside руб.")
     println("Средние траты в день: $averageSpentPerDay руб.")
-    println("Точнее: $sharpAverageSpentPerDay руб.")
-    println("")
+    println("Точнее: $preciseAverageSpentPerDay руб.")
+    println()
 
     println("=== Итог месяца ===")
     println("Доход: $salary руб.")
     println("Расходы: $spent руб. ($spentFromIncome% дохода)")
     println("Отложено: $moneySetAside руб.")
     println("На счёте: $balance руб.")
-    println("")
+    println()
+
     println("=== Цель: ноутбук за $target руб. ===")
     println("Уже есть: $balance руб.")
     println("Осталось накопить: $leftToTarget руб.")
